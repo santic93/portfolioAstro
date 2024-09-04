@@ -1,4 +1,17 @@
 ---
+import ReactIcon from '../icons/ReactIcon.astro';
+const TAGS = {
+  REACT: {
+    name: 'React.Js',
+    class: 'bg-black text-white',
+    icon: ReactIcon,
+  },
+  FIREBASE: {
+    name: 'Firebase',
+    class: 'bg-black text-white',
+    icon: ReactIcon,
+  },
+};
 const PROJECTS = [
   {
     title: '',
@@ -6,7 +19,7 @@ const PROJECTS = [
     link: '#',
     github: '#',
     image: '',
-    tags: ['', '', ''],
+    tags: [TAGS.REACT, TAGS.FIREBASE],
   },
   {
     title: '',
@@ -14,7 +27,7 @@ const PROJECTS = [
     link: '#',
     github: '#',
     image: '',
-    tags: ['', '', ''],
+    tags: [TAGS.REACT, TAGS.FIREBASE],
   },
   {
     title: '',
@@ -22,7 +35,7 @@ const PROJECTS = [
     link: '#',
     github: '#',
     image: '',
-    tags: ['', '', ''],
+    tags: [TAGS.REACT, TAGS.FIREBASE],
   },
   {
     title: '',
@@ -30,22 +43,30 @@ const PROJECTS = [
     link: '#',
     github: '#',
     image: '',
-    tags: ['', '', ''],
+    tags: [TAGS.REACT, TAGS.FIREBASE],
   },
 ];
 ---
 
 {
-  PROJECTS.map((project) => (
+  PROJECTS.map(({ image, title, desription, tags }) => (
     <article>
-      <h3>{project.title}</h3>
-      <p>{project.desription}</p>
-      <ul>
-        {project.tags.map((tag) => (
-          <li>{tag}</li>
+      <h3 class='text-2xl font-semibold text-yellow-200 mb-2'>{title}</h3>
+      <p class='text-lg mb-4 text-pretty'>{desription}</p>
+      <ul class='flex gap-x-2 flex-row mb-2'>
+        {tags.map((tag) => (
+         
+          <li>
+             {console.log(tag)}
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class='size-4' />
+            </span>
+          </li>
         ))}
       </ul>
-      <img src={project.image} alt={project.title} />
+      <img src={image} alt={title} class='rounded shadow-2xl shadow-white/10' />
     </article>
   ))
 }
