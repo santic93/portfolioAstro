@@ -1,0 +1,34 @@
+---
+import ExperienceItem from '../icons/ExperienceItem.astro';
+
+const experience = [
+  {
+    title: 'sdadsadsadas',
+    description: 'sdadsadsadas',
+    link: 'sdadsadsadas',
+    date: 'sdadsadsadas',
+  },
+  {
+    title: 'sdadsadsadas',
+    description: 'sdadsadsadas',
+    link: 'sdadsadsadas',
+    date: 'sdadsadsadas',
+  },
+  {
+    title: 'sdadsadsadas',
+    description: 'sdadsadsadas',
+    link: 'sdadsadsadas',
+    date: 'sdadsadsadas',
+  },
+];
+---
+
+<ol class='relative border-s border-gray-200 dark:border-gray-700'>
+  {
+    experience.map((exper) => (
+      <li class='mb-10 ms-4'>
+        <ExperienceItem {...exper} />
+      </li>
+    ))
+  }
+</ol>

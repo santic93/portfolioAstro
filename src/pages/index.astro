@@ -5,6 +5,8 @@ import LinkedIn from '../icons/LinkedIn.astro';
 import GitHub from '../icons/GitHub.astro';
 import Mail from '../icons/Mail.astro';
 import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import Section from '../components/Section.astro';
 ---
 
 <Layout
@@ -12,7 +14,7 @@ import SocialPill from '../components/SocialPill.astro';
   description='Portfolio Santiago Castro, Desarrollador Front End, Programador Web'
 >
   <main>
-    <section class='w-full lg:w-[740px] mx-auto py-44'>
+    <Section>
       <img src='' alt='santiago foto' class='rounded-full size-12 mb-4' />
       <h1 class='text-white text-5xl font-bold flex flex-row gap-x-4 pb-4'>
         Hola, soy Santiago! <a
@@ -37,10 +39,13 @@ import SocialPill from '../components/SocialPill.astro';
         <SocialPill href='https://github.com/santic93'>
           <GitHub class='size-6' />
         </SocialPill>
-        <SocialPill href='https://github.com/santic93'>
+        <SocialPill href='mailto:santiagocastro.sac@gmail.com'>
           <Mail class='size-6' />
         </SocialPill>
       </nav>
-    </section>
+    </Section>
+    <Section>
+      <Experience />
+    </Section>
   </main>
 </Layout>
