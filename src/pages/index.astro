@@ -7,16 +7,21 @@ import Mail from '../icons/Mail.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import Section from '../components/Section.astro';
+import Pc from '../icons/Pc.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Code from '../icons/Code.astro';
 ---
 
 <Layout
   title='Santiago Castro * Front End Developer * Programador Web'
   description='Portfolio Santiago Castro, Desarrollador Front End, Programador Web'
 >
-  <main>
-    <Section>
+  <main class='px-4'>
+    <Section class='py-44 pb-24'>
       <img src='' alt='santiago foto' class='rounded-full size-12 mb-4' />
-      <h1 class='text-white text-5xl font-bold flex flex-row gap-x-4 pb-4'>
+      <h1
+        class='text-white text-3xl lg:text-5xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10'
+      >
         Hola, soy Santiago! <a
           href='https://linkedin.com/in/santic93'
           class='flex justify-center items-center'
@@ -25,27 +30,38 @@ import Section from '../components/Section.astro';
           <Badge>Cualquier consulta es bienvenida</Badge>
         </a>
       </h1>
-      <h2 class='text-2xl opacity-80 text-wrap'>
+      <h2 class='text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]'>
         <span>+4 Años de experiencia.</span><span class='text-yellow-200/90'>
           Desarrollador Web.</span
         >
         <span class='text-red-100/90'>De BsAs, Argentina.</span> Me especializo en
         el Front End
       </h2>
-      <nav class='flex gap-x-4 mt-8'>
+      <nav class='flex gap-4 mt-8 flex-wrap'>
         <SocialPill href='https://linkedin.com/in/santic93'>
-          <LinkedIn class='size-6' />
+          <LinkedIn class='size-4 md:size-6' />
         </SocialPill>
         <SocialPill href='https://github.com/santic93'>
-          <GitHub class='size-6' />
+          <GitHub class='size-4 md:size-6' />
         </SocialPill>
         <SocialPill href='mailto:santiagocastro.sac@gmail.com'>
-          <Mail class='size-6' />
+          <Mail class='size-4 md:size-6' />
         </SocialPill>
       </nav>
     </Section>
-    <Section>
+    <Section id='experiencia'>
+      <h2 class='text-2xl font-semibold mb-6 flex gap-x-3 items-center'>
+        <Pc class='size-8' />
+        Experiencia laboral
+      </h2>
       <Experience />
+    </Section>
+    <Section id='proyectos'>
+      <h2 class='text-2xl font-semibold mb-6 flex gap-x-3 items-center'>
+        <Code class='size-8' />
+        Proyectos
+      </h2>
+      <Proyectos />
     </Section>
   </main>
 </Layout>
